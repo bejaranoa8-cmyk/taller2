@@ -53,15 +53,16 @@
     });
   }
 
-  function wfsUrl(typeName, fmt) {
-    return CONFIG.wfsBase + '?' + qs({
-      service: 'WFS',
-      version: '2.0.0',
-      request: 'GetFeature',
-      typeNames: typeName,
-      outputFormat: fmt
-    });
-  }
+  function wfsUrl(typeName, fmt, srs = 'EPSG:4326') {
+  return CONFIG.wfsBase + '?' + qs({
+    service: 'WFS',
+    version: '2.0.0',
+    request: 'GetFeature',
+    typeNames: typeName,
+    outputFormat: fmt,
+    srsName: srs
+  });
+}
 
   function kmlUrl(layer) {
     return CONFIG.wmsBase.replace(/\/wms$/i, '/wms/kml') + '?' + qs({ layers: layer });
@@ -129,16 +130,18 @@
   if (legendMalla) legendMalla.src = legendUrl(CONFIG.layers.malla);
 
   const downloadMap = {
-    'colegios-shp': wfsUrl(CONFIG.layers.colegios, 'shape-zip'),
-    'colegios-kml': kmlUrl(CONFIG.layers.colegios),
-    'colegios-gml': wfsUrl(CONFIG.layers.colegios, 'GML3'),
-    'perimetro-shp': wfsUrl(CONFIG.layers.perimetro, 'shape-zip'),
-    'perimetro-kml': kmlUrl(CONFIG.layers.perimetro),
-    'perimetro-gml': wfsUrl(CONFIG.layers.perimetro, 'GML3'),
-    'malla-shp': wfsUrl(CONFIG.layers.malla, 'shape-zip'),
-    'malla-kml': kmlUrl(CONFIG.layers.malla),
-    'malla-gml': wfsUrl(CONFIG.layers.malla, 'GML3')
-  };
+  'colegios-shp': wfsUrl(CONFIG.layers.colegios, 'shape-zip', 'EPSG:4326'),
+  'colegios-kml': kmlUrl(CONFIG.layers.colegios),
+  'colegios-gml': wfsUrl(CONFIG.layers.colegios, 'GML3', 'EPSG:4326'),
+
+  'perimetro-shp': wfsUrl(CONFIG.layers.perimetro, 'shape-zip', 'EPSG:4326'),
+  'perimetro-kml': kmlUrl(CONFIG.layers.perimetro),
+  'perimetro-gml': wfsUrl(CONFIG.layers.perimetro, 'GML3', 'EPSG:4326'),
+
+  'malla-shp': wfsUrl(CONFIG.layers.malla, 'shape-zip', 'EPSG:4326'),
+  'malla-kml': kmlUrl(CONFIG.layers.malla),
+  'malla-gml': wfsUrl(CONFIG.layers.malla, 'GML3', 'EPSG:4326')
+};
 
   Object.entries(downloadMap).forEach(([id, url]) => {
     const el = document.getElementById(id);
