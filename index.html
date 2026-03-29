@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geoportal Académico - John Alexis Bejarano</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.6.1/ol.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow"><i></i> Geoportal académico en HTML</div>
+          <h1>John Alexis Bejarano Parrado</h1>
+          <p>Ingeniero de Sistemas, especialista en Big Data y profesional con experiencia en catastro multipropósito, gestión predial y publicación de servicios geográficos web.</p>
+        </div>
+        <div class="hero-cards">
+          <div class="mini"><strong>3 capas</strong><span>Puntos, líneas y polígonos publicados en GeoServer</span></div>
+          <div class="mini"><strong>1 visor</strong><span>OpenLayers con OpenStreetMap, WMS, escala y coordenadas</span></div>
+        </div>
+      </div>
+    </section>
+
+    <nav class="nav">
+      <button class="nav-btn active" data-tab="cv">Curriculum Vitae</button>
+      <button class="nav-btn" data-tab="wms">Visualización WMS</button>
+      <button class="nav-btn" data-tab="descargas">Descargas</button>
+      <button class="nav-btn" data-tab="visor">Visor OpenLayers</button>
+      <button class="nav-btn" data-tab="contacto">Contacto</button>
+    </nav>
+
+    <section id="cv" class="panel active">
+      <div class="section-head">
+        <div>
+          <h2>Curriculum Vitae</h2>
+          <p>Resumen profesional integrado al geoportal para presentar perfil, formación y experiencia relacionada con SIG, catastro y gestión territorial.</p>
+        </div>
+        <span class="pill">Perfil integrado</span>
+      </div>
+
+      <div class="grid grid-2" style="margin-bottom:16px;">
+        <div class="card">
+          <div class="profile">
+            <div class="avatar">JB</div>
+            <div>
+              <h3 style="margin-bottom:8px;">John Alexis Bejarano Parrado</h3>
+              <p class="muted">Ingeniero de Sistemas · Especialización en Big Data</p>
+              <div class="chip-row">
+                <span class="chip"><i></i> QGIS</span>
+                <span class="chip"><i></i> GeoServer</span>
+                <span class="chip"><i></i> OpenLayers</span>
+                <span class="chip"><i></i> Catastro</span>
+                <span class="chip"><i></i> Gestión Predial</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card soft">
+          <h3>Datos personales</h3>
+          <div class="info-row"><span class="info-label">Correo</span><span><a href="mailto:bejaranoa8@gmail.com">bejaranoa8@gmail.com</a></span></div>
+          <div class="info-row"><span class="info-label">Teléfono</span><span>3016877524</span></div>
+          <div class="info-row"><span class="info-label">Nacimiento</span><span>04/07/1994 · Villavicencio, Meta</span></div>
+          <div class="info-row"><span class="info-label">Residencia</span><span>Restrepo, Meta, Colombia</span></div>
+          <div class="info-row"><span class="info-label">Idioma</span><span>Español</span></div>
+        </div>
+      </div>
+
+      <div class="grid grid-2" style="margin-bottom:16px;">
+        <div class="card">
+          <h3>Formación académica</h3>
+          <p><strong>Especialización en Big Data</strong><br><span class="muted">Finalización: noviembre de 2023</span></p>
+          <p><strong>Ingeniería de Sistemas</strong><br><span class="muted">Finalización: noviembre de 2016 · Tarjeta profesional R2020011043</span></p>
+          <p><strong>Educación básica secundaria</strong><br><span class="muted">2011</span></p>
+        </div>
+
+        <div class="card soft">
+          <h3>Formación complementaria</h3>
+          <p>Fundamentos de Administración de Tierras y del Territorio · IGAC · 2024</p>
+          <p>Catastro Multipropósito · ESAP · 2022</p>
+          <p>Creación de Geoportales Avanzados con ArcGIS API for JavaScript · CAEF · 2022</p>
+          <p>Planes de Desarrollo Municipal y Ordenamiento Territorial · ESAP · 2022</p>
+          <p>Reconocedor Predial Urbano – Rural Multipropósito · Virtual IGAC-CIAF · 2021</p>
+          <p>Reconocimiento Predial Urbano y Rural · IGAC · 2014</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Experiencia laboral destacada</h3>
+        <div class="timeline" style="margin-top:14px;">
+          <div class="tl-item">
+            <div class="tl-date">Nov 2024<br>– Sep 2025</div>
+            <div class="tl-body">
+              <div class="tl-entity">Instituto Geográfico Agustín Codazzi</div>
+              <div class="tl-role">Actualización Catastral</div>
+              <div class="tl-loc">Puerto Gaitán, Meta</div>
+              <span class="badge badge-pub">Entidad pública</span>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-date">Feb 2024<br>– Jun 2024</div>
+            <div class="tl-body">
+              <div class="tl-entity">Guzmán Martínez Asociados SAS</div>
+              <div class="tl-role">Profesional contratista · Administración y gestión predial</div>
+              <div class="tl-loc">Puerto Gaitán, Meta</div>
+              <span class="badge badge-priv">Sector privado</span>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-date">Jul 2023<br>– Ene 2024</div>
+            <div class="tl-body">
+              <div class="tl-entity">Alcaldía de Puerto Gaitán</div>
+              <div class="tl-role">Subdirección de departamento</div>
+              <div class="tl-loc">Puerto Gaitán, Meta</div>
+              <span class="badge badge-pub">Entidad pública</span>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-date">2019<br>– 2023</div>
+            <div class="tl-body">
+              <div class="tl-entity">Experiencia catastral y de planeación territorial</div>
+              <div class="tl-role">IGAC, Alcaldías del Meta y soporte técnico</div>
+              <div class="tl-loc">Villavicencio, Granada, Puerto Gaitán y Restrepo</div>
+              <span class="badge badge-pub">Experiencia consolidada</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="wms" class="panel">
+      <div class="section-head">
+        <div>
+          <h2>Visualización WMS</h2>
+          <p>Alterna entre la composición de capas y cada capa individual sin mostrar la URL del servicio WMS.</p>
+        </div>
+        <span class="pill">Cambio de imagen WMS</span>
+      </div>
+
+      <div class="preview-wrap">
+        <div class="card">
+          <div class="btn-row">
+            <button class="btn btn-primary" data-preview="composicion">Composición</button>
+            <button class="btn btn-ghost" data-preview="colegios">Colegios</button>
+            <button class="btn btn-ghost" data-preview="perimetro">Perímetro</button>
+            <button class="btn btn-ghost" data-preview="malla">Malla vial</button>
+          </div>
+
+          <div class="wms-img-box">
+            <img id="wmsImage" alt="Vista WMS">
+          </div>
+          <p id="activePreviewText" class="muted" style="margin-top:12px;">Composición general de las tres capas publicadas.</p>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Leyenda desde GeoServer</h3>
+            <div class="legend-item">
+              <img class="legend-img" id="legend-colegios" alt="Leyenda Colegios">
+              <div>
+                <strong style="font-size:14px;">Colegios</strong>
+                <div class="muted" style="font-size:12px;">Capa vectorial de puntos</div>
+              </div>
+            </div>
+            <div class="legend-item">
+              <img class="legend-img" id="legend-perimetro" alt="Leyenda Perímetro">
+              <div>
+                <strong style="font-size:14px;">Perímetro</strong>
+                <div class="muted" style="font-size:12px;">Capa vectorial de polígonos</div>
+              </div>
+            </div>
+            <div class="legend-item">
+              <img class="legend-img" id="legend-malla" alt="Leyenda Malla vial">
+              <div>
+                <strong style="font-size:14px;">Malla vial</strong>
+                <div class="muted" style="font-size:12px;">Capa vectorial de líneas</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card soft">
+            <h3>Descripción</h3>
+            <p>Esta sección cumple con el requerimiento de visualizar las tres capas publicadas y su composición desde el geoportal de prácticas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="descargas" class="panel">
+      <div class="section-head">
+        <div>
+          <h2>Descarga de capas</h2>
+          <p>Botones directos para descargar las capas en formatos Shapefile, KML y GML desde GeoServer.</p>
+        </div>
+        <span class="pill">Formatos geográficos</span>
+      </div>
+
+      <div class="download-grid">
+        <div class="card">
+          <div class="layer-tag">maestria:Colegios</div>
+          <h3>Capa de puntos</h3>
+          <div class="btn-row">
+            <a id="colegios-shp" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Shapefile</a>
+            <a id="colegios-kml" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">KML</a>
+            <a id="colegios-gml" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">GML</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="layer-tag">maestria:Perimetro</div>
+          <h3>Capa de polígonos</h3>
+          <div class="btn-row">
+            <a id="perimetro-shp" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Shapefile</a>
+            <a id="perimetro-kml" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">KML</a>
+            <a id="perimetro-gml" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">GML</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="layer-tag">maestria:malla vial</div>
+          <h3>Capa de líneas</h3>
+          <div class="btn-row">
+            <a id="malla-shp" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Shapefile</a>
+            <a id="malla-kml" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">KML</a>
+            <a id="malla-gml" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">GML</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="visor" class="panel">
+      <div class="section-head">
+        <div>
+          <h2>Visor OpenLayers</h2>
+          <p>Visor con fondo OpenStreetMap, capas WMS individuales, barra de escala, lectura de coordenadas y controles para activar o desactivar cada capa.</p>
+        </div>
+        <span class="pill">Navegación corregida</span>
+      </div>
+
+      <div id="visor-layout" style="display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:start;">
+        <div>
+          <div id="map-shell">
+            <div id="map"></div>
+          </div>
+
+          <div class="map-tools">
+            <button class="btn btn-primary" id="btnResetView" type="button">Volver a la extensión</button>
+          </div>
+
+          <div class="status" id="wms-status">Abre esta pestaña para cargar el visor y las capas WMS.</div>
+          <div class="coords-bar" id="coords">Lat: -- | Lon: --</div>
+        </div>
+
+        <div class="side-grid">
+          <div class="card">
+            <h3>Control de capas</h3>
+
+            <label class="layer-toggle">
+              <span class="layer-left">
+                <input type="checkbox" id="chk-osm" checked>
+                <span class="layer-dot" style="background:#94a3b8;"></span>
+                <span>
+                  <div class="layer-name">OpenStreetMap</div>
+                  <div class="layer-type">Capa base</div>
+                </span>
+              </span>
+            </label>
+
+            <label class="layer-toggle">
+              <span class="layer-left">
+                <input type="checkbox" id="chk-perimetro" checked>
+                <span class="layer-dot" style="background:#4caf50;"></span>
+                <span>
+                  <div class="layer-name">Perímetro</div>
+                  <div class="layer-type">Polígonos</div>
+                </span>
+              </span>
+            </label>
+
+            <label class="layer-toggle">
+              <span class="layer-left">
+                <input type="checkbox" id="chk-malla" checked>
+                <span class="layer-dot" style="background:#f59e0b;"></span>
+                <span>
+                  <div class="layer-name">Malla vial</div>
+                  <div class="layer-type">Líneas</div>
+                </span>
+              </span>
+            </label>
+
+            <label class="layer-toggle">
+              <span class="layer-left">
+                <input type="checkbox" id="chk-colegios" checked>
+                <span class="layer-dot" style="background:#d7263d;border-radius:50%;"></span>
+                <span>
+                  <div class="layer-name">Colegios</div>
+                  <div class="layer-type">Puntos</div>
+                </span>
+              </span>
+            </label>
+          </div>
+
+          <div class="card soft">
+            <h3>Leyenda visible</h3>
+
+            <div class="geo-legend-item" id="leg-perimetro-wrap">
+              <strong>Perímetro</strong>
+              <img id="leg-perimetro-img" alt="Leyenda Perímetro">
+            </div>
+
+            <div class="geo-legend-item" id="leg-malla-wrap">
+              <strong>Malla vial</strong>
+              <img id="leg-malla-img" alt="Leyenda Malla vial">
+            </div>
+
+            <div class="geo-legend-item" id="leg-colegios-wrap">
+              <strong>Colegios</strong>
+              <img id="leg-colegios-img" alt="Leyenda Colegios">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="panel">
+      <div class="section-head">
+        <div>
+          <h2>Contacto</h2>
+          <p>Formulario que genera un correo automático usando el cliente de correo del usuario.</p>
+        </div>
+        <span class="pill">Contacto automático</span>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <form id="contactForm">
+            <div>
+              <label for="nombre">Nombre</label>
+              <input id="nombre" type="text" placeholder="Escribe tu nombre" required>
+            </div>
+
+            <div style="margin-top:12px;">
+              <label for="correo">Correo del remitente</label>
+              <input id="correo" type="email" placeholder="correo@ejemplo.com" required>
+            </div>
+
+            <div style="margin-top:12px;">
+              <label for="asunto">Asunto</label>
+              <input id="asunto" type="text" placeholder="Consulta sobre el geoportal" required>
+            </div>
+
+            <div style="margin-top:12px;">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" placeholder="Escribe aquí tu mensaje" required></textarea>
+            </div>
+
+            <div class="btn-row" style="margin-bottom:0;margin-top:14px;">
+              <button class="btn btn-primary" type="submit">Enviar correo</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="card soft">
+          <h3>Información de contacto</h3>
+          <p><strong>Responsable:</strong> John Alexis Bejarano Parrado</p>
+          <p><strong>Correo destino:</strong> bejaranoa8@gmail.com</p>
+          <p><strong>Método:</strong> <code>mailto:</code></p>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">Geoportal académico listo para pruebas locales y posterior publicación en GitHub Pages</div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/ol@v10.6.1/dist/ol.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
